@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css" />
+    <title>Blue Plus - Products</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand logo" href="index.html">Blue Plus</a> -->
+         <img class="navbar-brand logo" width="140px;" alt="no" src="./assets/logo.png"/>   
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-list" style="font-size: 28px; color: #0056b3"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0 search-box">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Search Products..."
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Heading -->
+    <section class="products-heading-section text-center my-3">
+      <div class="container">
+        <h1 class="section-title">Our Products</h1>
+        <p class="section-desc">
+          Explore our wide range of pharmaceutical products and healthcare
+          solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid-section mb-5">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 - Antibiotics -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product1.jpeg"
+                alt="Antibiotics"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Antibiotics</h5>
+                <p class="ss-card-text">
+                  Treat bacterial infections effectively.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 - Antivirals -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product2.jpeg"
+                alt="Antivirals"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Antivirals</h5>
+                <p class="ss-card-text">Combat viral infections efficiently.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 - Cardiovascular -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product7.jpeg"
+                alt="Cardiovascular"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Cardiovascular Drugs</h5>
+                <p class="ss-card-text">
+                  Support heart health and blood pressure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 - Diabetes -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product6.jpeg"
+                alt="Diabetes"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Diabetes Medications</h5>
+                <p class="ss-card-text">
+                  Control blood sugar levels effectively.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 - Painkillers -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product5.jpeg"
+                alt="Painkillers"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Painkillers</h5>
+                <p class="ss-card-text">Relieve mild to severe pain safely.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 - medical devices -->
+
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product8.jpeg"
+                alt="Medical Devices"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Medical Devices</h5>
+                <p class="ss-card-text">
+                  Tools and devices for healthcare applications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 - OTC Medicines -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product3.jpeg"
+                alt="OTC Medicines"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">OTC Medicines</h5>
+                <p class="ss-card-text">
+                  Over-the-counter remedies for general health.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 - Generic Drugs -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/carousel2.jpg"
+                alt="Generic Drugs"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Generic Drugs</h5>
+                <p class="ss-card-text">
+                  Cost-effective alternatives to branded medicines.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 - Vaccines -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product10.jpeg"
+                alt="Vaccines"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Vaccines</h5>
+                <p class="ss-card-text">
+                  Prevent infectious diseases effectively.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 - Biologics -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/carousel1.jpg"
+                alt="Biologics"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Biologics</h5>
+                <p class="ss-card-text">
+                  Advanced treatments including antibodies and proteins.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 11 - Herbal / Natural -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product9.jpeg"
+                alt="Herbal Products"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Herbal Products</h5>
+                <p class="ss-card-text">
+                  Plant-based supplements and nutraceuticals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12 - mental health drugs -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="ss-card">
+              <img
+                src="assets/product4.jpeg"
+                alt="Mental Health"
+                class="img-fluid ss-img"
+              />
+              <div class="ss-card-body mt-3 text-center">
+                <h5 class="ss-card-title">Mental Health Drugs</h5>
+                <p class="ss-card-text">
+                  Support emotional well-being and therapy.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer-section mt-5 pt-5 pb-3">
+      <div class="container">
+        <div class="row text-white gy-4">
+          <div class="col-lg-4 col-md-6">
+            <!-- <h5 class="footer-title">Blue Plus</h5> -->
+             <img class="navbar-brand logo" width="140px;" src="./assets/logo.png"/>
+            <p class="footer-text">
+              Leading healthcare solutions providing world-class pharmaceutical
+              products and services.
+            </p>
+            <p class="footer-text">
+              &copy; 2025 Blue Plus. All rights reserved.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Services</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Pharmaceuticals</a></li>
+              <li><a href="#">Research & Development</a></li>
+              <li><a href="#">Community Programs</a></li>
+              <li><a href="#">Healthcare Initiatives</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="footer-title">Contact</h5>
+            <p class="footer-text mb-1">
+              <i class="bi bi-geo-alt-fill me-2"></i>123 Blue Plus Street, City,
+              Country
+            </p>
+            <p class="footer-text mb-1">
+              <i class="bi bi-telephone-fill me-2"></i>+91 123 456 7890
+            </p>
+            <p class="footer-text mb-1">
+              <i class="bi bi-envelope-fill me-2"></i>info@blueplus.com
+            </p>
+            <div class="footer-social mt-2">
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

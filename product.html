@@ -3,339 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products | Blue Plus Pharmaceuticals</title>
+    <title>Products Portfolio | NexGen Pharma Global</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./assest/fab.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #003399;
-            --hover-blue: #002266;
-            --bg-light: #f8f9fa;
-        }
-
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-light); }
-
-        /* HEADER STYLES */
-        .navbar { background: white; border-bottom: 3px solid var(--primary-blue); box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .nav-link { color: var(--primary-blue) !important; font-weight: 600; }
-        .nav-link:hover { color: var(--hover-blue) !important; }
-
-        /* PRODUCT PAGE HEADER */
-        .page-header {
-            background: linear-gradient(rgba(0,51,153,0.8), rgba(0,51,153,0.8)), url('https://images.unsplash.com/photo-1579165466511-70e21ad10b05?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        /* PRODUCT CARDS */
-        .product-card {
-            border: none;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            overflow: hidden;
-            background: white;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        .product-img-container {
-            background: #f1f5ff;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .product-card img {
-            height: 180px;
-            width: auto;
-            object-fit: contain;
-        }
-        .btn-blue {
-            background-color: var(--primary-blue);
-            color: white;
-            border-radius: 20px;
-        }
-        .btn-blue:hover {
-            background-color: var(--hover-blue);
-            color: white;
-        }
-
-        /* FOOTER STYLES */
-        .footer { background-color: var(--primary-blue); color: white; padding: 50px 0 20px; }
-        .footer-logo { filter: brightness(0) invert(1); height: 40px; }
-        .footer a { color: #ccd9ff; text-decoration: none; }
-        .footer a:hover { color: white; }
+        
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.png" alt="BLUE PLUS" height="40">
+    <!-- 1. NAVIGATION -->
+     <nav id="main-nav" class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[110]">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="https://www.bluepluspharma.com/blue_plus.png" alt="BluePlus Logo" class="h-10 md:h-12 w-auto object-contain">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="hover:text-sky-500 transition-colors">Home</a>
+                <a href="product.html" class="text-sky-500">Products</a>
+                <a href="contact.html" class="hover:text-sky-500 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2 text-slate-900 focus:outline-none relative z-[120]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-                </ul>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] lg:hidden flex flex-col pt-32 px-6">
+            <div class="flex flex-col space-y-6 text-2xl font-bold text-slate-900">
+                <a href="index.html" class="border-b border-slate-100 pb-4">Home</a>
+                <a href="product.html" class="text-sky-500 border-b border-slate-100 pb-4">Products</a>
+                <a href="contact.html" class="border-b border-slate-100 pb-4">Contact</a>
+            </div>
+            <div class="mt-auto pb-12">
+                <a href="mailto:bluepluspharma11@gmail.com" class="text-sky-600 font-bold flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> bluepluspharma11@gmail.com
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="page-header">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Our Medical Products</h1>
-            <p class="lead">Trusted healthcare solutions for a healthier tomorrow.</p>
+    <!-- 2. HERO HEADER -->
+    <header class="pt-32 pb-16 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <span class="text-sky-600 font-bold uppercase tracking-[0.3em] text-xs">Global Distribution Portfolio</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-6">Explore Our <span class="text-sky-500">Medication Catalog</span></h1>
+            <p class="text-slate-500 max-w-2xl text-lg">BluePlus Pharma distributes thousands of high-demand pharmaceuticals. We ensure supply chain integrity for critical and essential treatments.</p>
         </div>
     </header>
 
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/amboxi/amoxi_box.jpeg" alt="Antibiotics">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">AMOXIBLUE</h5>
-                            <p class="text-muted small">Anti-bacterial formulation</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/bluecoxib/bluecoxib_box.jpeg" style="width: 250px;" alt="Pain Relief">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Bluecoxib</h5>
-                            <p class="text-muted small">Effective pain management</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-success mb-3">Capsules</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/blumaxim/blumaxim_box.jpeg" alt="Syrup">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Blumaxim</h5>
-                            <p class="text-muted small">Multivitamin Capsules</p>
-                            <span class="badge rounded-pill bg-success mb-3">Capsules</span>
-                            <!-- <span class="badge rounded-pill bg-warning text-dark mb-3">Syrup</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calblued3/cald3box.jpeg" alt="Vitamins" style="width: 200px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CalBlue-D3</h5>
-                            <p class="text-muted small">Daily multivitamin</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-danger mb-3">Nutrition</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
+    <!-- 3. FILTERING SYSTEM -->
+    <section class="sticky top-20 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+                <button class="filter-chip active px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">All Items</button>
+                <button class="filter-chip bg-slate-50 text-slate-500 hover:bg-slate-100 px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">Oncology</button>
+                <button class="filter-chip bg-slate-50 text-slate-500 hover:bg-slate-100 px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">Antibiotics</button>
+                <button class="filter-chip bg-slate-50 text-slate-500 hover:bg-slate-100 px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">Critical Care</button>
+                <button class="filter-chip bg-slate-50 text-slate-500 hover:bg-slate-100 px-6 py-2 rounded-full text-sm font-bold whitespace-nowrap">Vaccines</button>
             </div>
             
-        </div>
-
-         <div class="container">
-            <div class="row g-4" style="margin-top: 10px;">
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calbluek2_capsule/calk2cap.png" style="width: 200px;" alt="Antibiotics">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CALBLUE-K2</h5>
-                            <p class="text-muted small">Vitamins</p>
-                            <span class="badge rounded-pill bg-success mb-3">Capsules</span>
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calbluek2_tablets/calk2_box.png" style="width: 250px;" alt="Pain Relief">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CALBLUE-K2</h5>
-                            <p class="text-muted small">Calcium, Vitamins K2-7</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-success mb-3">Capsules</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calmblu_fm/calmblu_fm.jpeg" style="width: 200px;" alt="Syrup">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CALMBLU-FM</h5>
-                            <p class="text-muted small">Melitracen Tablets</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-warning text-dark mb-3">Syrup</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/cefares_200/cefares_box.jpeg" alt="Vitamins" style="width: 200px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Cafares-200</h5>
-                            <p class="text-muted small">Daily multivitamin</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-danger mb-3">Nutrition</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="relative w-full md:w-80">
+                <input type="text" placeholder="Search product name or molecule..." class="w-full pl-12 pr-4 py-3 bg-slate-50 rounded-xl text-sm focus:ring-2 focus:ring-sky-500 outline-none border-none">
+                <svg class="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
             </div>
-            
-        </div>
-
-         <div class="container">
-            <div class="row g-4" style="margin-top: 10px;">
-                
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/cefit_duo/cefit_box.jpeg" style="width: 200px;" alt="Antibiotics">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CEFIT-DUO</h5>
-                            <p class="text-muted small">Vitamins</p>
-                           <span class="badge rounded-pill bg-danger mb-3">Injection</span>
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calbluek2_tablets/calk2_box.png" style="width: 250px;" alt="Pain Relief">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CALBLUE-K2</h5>
-                            <p class="text-muted small">Calcium, Vitamins K2-7</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-success mb-3">Capsules</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/calmblu_fm/calmblu_fm.jpeg" style="width: 200px;" alt="Syrup">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">CALMBLU-FM</h5>
-                            <p class="text-muted small">Melitracen Tablets</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-warning text-dark mb-3">Syrup</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="card h-100 product-card">
-                        <div class="product-img-container">
-                            <img src="product/cefares_200/cefares_box.jpeg" alt="Vitamins" style="width: 200px;">
-                        </div>
-                        <div class="card-body text-center">
-                            <h5 class="fw-bold">Cafares-200</h5>
-                            <p class="text-muted small">Daily multivitamin</p>
-                            <span class="badge rounded-pill bg-primary mb-3">Tablets</span>
-                            <!-- <span class="badge rounded-pill bg-danger mb-3">Nutrition</span> -->
-                            <button class="btn btn-blue btn-sm w-100">Enquire Now</button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="logo.png" alt="BLUE PLUS" class="footer-logo mb-3">
-                    <p>Providing excellence in pharmaceutical manufacturing and global distribution since 2010.</p>
+    <!-- 4. PRODUCT GRID -->
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            
+            <!-- Product 1 -->
+            <div class="product-card bg-white rounded-[32px] overflow-hidden flex flex-col">
+                <div class="p-8 flex-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-sky-50 rounded-xl flex items-center justify-center text-sky-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <span class="badge badge-cold">Cold Chain</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-2">Nex-Immunox 500</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Molecule: Immunoglobulin G</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Distributed from premium European labs for autoimmune treatment. Highly stable in temperature-controlled transit.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            WHO-GMP Verified
+                        </div>
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Lead Time: 5-7 Days
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 mb-4">
-                    <h5 class="text-white">Links</h5>
-                    <ul class="list-unstyled mt-3">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Careers</a></li>
+                <button class="w-full py-4 bg-slate-900 text-white font-bold text-sm hover:bg-sky-500 transition-all">Sourcing Inquiry</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card bg-white rounded-[32px] overflow-hidden flex flex-col">
+                <div class="p-8 flex-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <span class="badge badge-urgent">Urgent Supply</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-2">Criti-Drip IV</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Molecule: Ringer's Lactate</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">High-volume essential IV solutions for trauma centers and surgery units.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Bulk Ready
+                        </div>
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Direct Hospital Delivery
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full py-4 bg-slate-900 text-white font-bold text-sm hover:bg-sky-500 transition-all">Sourcing Inquiry</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card bg-white rounded-[32px] overflow-hidden flex flex-col">
+                <div class="p-8 flex-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <span class="badge badge-generic">High Demand</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-2">Amoxi-Trust 1g</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Molecule: Amoxicillin</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Sourced for consistent supply to retail pharmacies and clinics. Guaranteed authenticity.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Batch Tracked
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full py-4 bg-slate-900 text-white font-bold text-sm hover:bg-sky-500 transition-all">Sourcing Inquiry</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card bg-white rounded-[32px] overflow-hidden flex flex-col">
+                <div class="p-8 flex-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-pink-50 rounded-xl flex items-center justify-center text-pink-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <span class="badge badge-cold">Bio-Stable</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-2">Vax-Guard Pro</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Molecule: Multi-Antigen</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">Seasonal vaccine distribution with integrated data-logger tracking for temperature verification.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center text-xs font-bold text-slate-600">
+                            <svg class="w-4 h-4 mr-2 text-teal-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Real-time Tracking
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full py-4 bg-slate-900 text-white font-bold text-sm hover:bg-sky-500 transition-all">Sourcing Inquiry</button>
+            </div>
+
+            <!-- Product 5 (Generic Example) -->
+            <div class="product-card bg-white rounded-[32px] overflow-hidden flex flex-col">
+                <div class="p-8 flex-1">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7z"/></svg>
+                        </div>
+                        <span class="badge bg-slate-100 text-slate-500">Essential</span>
+                    </div>
+                    <h3 class="text-xl font-extrabold text-slate-900 mb-2">Para-Max 650</h3>
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Molecule: Paracetamol</p>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6">High-volume daily supply for large pharmacy chains. Cost-efficient procurement.</p>
+                </div>
+                <button class="w-full py-4 bg-slate-900 text-white font-bold text-sm hover:bg-sky-500 transition-all">Sourcing Inquiry</button>
+            </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-16 flex items-center justify-center space-x-4">
+            <button class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-white transition-all">←</button>
+            <button class="w-10 h-10 rounded-full bg-sky-500 text-white font-bold text-sm">1</button>
+            <button class="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-sm hover:border-sky-500 transition-all">2</button>
+            <button class="w-10 h-10 rounded-full bg-white border border-slate-200 text-slate-600 font-bold text-sm hover:border-sky-500 transition-all">3</button>
+            <button class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-400 hover:bg-white transition-all">→</button>
+        </div>
+    </main>
+
+    <!-- 5. CALL TO ACTION -->
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="bg-gradient-to-r from-sky-600 to-indigo-700 rounded-[40px] p-12 md:p-20 text-center text-white relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <svg width="100%" height="100%" fill="none" viewBox="0 0 100 100"><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" stroke="white" stroke-width="0.5"/></pattern><rect width="100" height="100" fill="url(#grid)"/></svg>
+            </div>
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 relative z-10">Bulk Sourcing? <br>Let’s Discuss.</h2>
+            <p class="text-sky-100 text-lg mb-10 max-w-xl mx-auto relative z-10">Connect with our procurement experts for hospital tenders, wholesale orders, or clinical trials supply.</p>
+            <button class="bg-white text-sky-600 px-10 py-4 rounded-2xl font-extrabold text-lg hover:bg-sky-50 transition-all relative z-10 shadow-xl shadow-sky-900/20">Contact Sales Team</button>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-8">
+                        
+                        <span class="text-xl font-bold tracking-tight">BLUE<span class="text-sky-500">PLUS</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Leading the world in pharmaceutical distribution, supply chain management, and clinical sourcing since 2001.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Services</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Cold Chain Logistics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hospital Sourcing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Stock Management</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="text-white">Categories</h5>
-                    <ul class="list-unstyled mt-3">
-                        <li><a href="#">Antibiotics</a></li>
-                        <li><a href="#">Pain Management</a></li>
-                        <li><a href="#">Vitamin Supplements</a></li>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Quick Links</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="product.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4 text-md-end">
-                    <h5 class="text-white">Contact</h5>
-                    <p class="mt-3">info@blueplus.com<br>+1 800-BLUE-PLUS</p>
-                    <div class="fs-4 mt-2">
-                        <a href="#" class="me-2"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Contact Us</h5>
+                    <div class="flex flex-wrap gap-2">
+                        <p class="px-2 py-1 text-[12px] font-bold">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:bluepluspharma11@gmail.com" style="color: white; text-decoration: none;">bluepluspharma11@gmail.com</a>
+                        </p>
+                        <p class="px-2 py-1 text-[12px] font-bold">
+                            <i class="fas fa-phone me-2"></i> 
+                             <a href="tel:+919782425810" style="color: white; text-decoration: none;">+91 9782425810</a>,
+                             <a href="tel:+917566660907" style="color: white; text-decoration: none;">7566660907</a>,
+                             <a href="tel:+917667766305" style="color: white; text-decoration: none;">7667766305</a>
+                        </p>
                     </div>
                 </div>
             </div>
-            <hr class="border-light">
-            <p class="text-center small mb-0">&copy; 2025 Blue Plus Pharmaceuticals. All rights reserved.</p>
+            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs text-center">&copy; 2025 BluePlus Pharma Global Distribution. All logistics operations comply with national pharma standards.</p>
+                <div class="flex space-x-6 text-slate-500 text-xs">
+                    <a href="#" class="hover:text-sky-400">Privacy</a>
+                    <a href="#" class="hover:text-sky-400">Logistics Policy</a>
+                    <a href="#" class="hover:text-sky-400">Vendor Portal</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Mobile Menu Logic (Aligned with Home/Contact Page) ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.getElementById('main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isActive = mobileMenu.classList.toggle('active');
+            if(isActive) {
+                // Menu Opened
+                nav.classList.add('nav-active');
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu Closed
+                nav.classList.remove('nav-active');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // --- Filter Chips Logic ---
+        const chips = document.querySelectorAll('.filter-chip');
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => {
+                    c.classList.remove('active');
+                    c.classList.add('bg-slate-50', 'text-slate-500');
+                });
+                chip.classList.add('active');
+                chip.classList.remove('bg-slate-50', 'text-slate-500');
+            });
+        });
+    </script>
 </body>
 </html>

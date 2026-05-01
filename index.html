@@ -3,141 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blue Plus | Pharmaceutical Excellence</title>
+    <title>BluePlus Pharma | Global Healthcare Distribution</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="./assest/fab.png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #003399; /* Matching the logo theme */
-            --light-blue: #eef4ff;
-        }
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-
-        .navbar { background-color: white; border-bottom: 3px solid var(--primary-blue); }
-        .nav-link { color: var(--primary-blue) !important; font-weight: 600; margin: 0 10px; }
-        
-        .carousel-item { height: 500px; background: #002266; color: white; }
-        .carousel-caption { background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; }
-
-        .section-padding { padding: 80px 0; }
-        .bg-light-blue { background-color: var(--light-blue); }
-        
-        .btn-primary { background-color: var(--primary-blue); border: none; }
-        .btn-primary:hover { background-color: #002266; }
-
-        .footer { background-color: var(--primary-blue); color: white; padding: 40px 0; }
-        .footer-logo { filter: brightness(0) invert(1); max-width: 150px; } /* Makes logo white for footer */
-        
-        .feature-box { text-align: center; padding: 20px; transition: 0.3s; }
-        .feature-box i { font-size: 3rem; color: var(--primary-blue); margin-bottom: 15px; }
-    </style>
+        </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="BLUE PLUS" height="40">
+    <!-- 1. NAVIGATION -->
+     <nav id="main-nav" class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-[110]">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3">
+                <img src="https://www.bluepluspharma.com/blue_plus.png" alt="BluePlus Logo" class="h-10 md:h-12 w-auto object-contain">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-500">
+                <a href="index.html" class="text-sky-500">Home</a>
+                <a href="product.html" class="hover:text-sky-500 transition-colors">Products</a>
+                <a href="contact.html" class="hover:text-sky-500 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="lg:hidden p-2 text-slate-900 focus:outline-none relative z-[120]">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="product.html">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
-                </ul>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[105] lg:hidden flex flex-col pt-32 px-6">
+            <div class="flex flex-col space-y-6 text-2xl font-bold text-slate-900">
+                <a href="index.html" class="text-sky-500 border-b border-slate-100 pb-4">Home</a>
+                <a href="product.html" class="border-b border-slate-100 pb-4">Products</a>
+                <a href="contact.html" class="border-b border-slate-100 pb-4">Contact</a>
+            </div>
+            <div class="mt-auto pb-12">
+                <a href="mailto:bluepluspharma11@gmail.com" class="text-sky-600 font-bold flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> bluepluspharma11@gmail.com
+                </a>
             </div>
         </div>
     </nav>
+    <!-- 2. CAROUSEL IMAGE SECTION -->
+    <div class="carousel-container">
+        <!-- Slide 1 -->
+        <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=2070');">
+            <div class="slide-overlay"></div>
+            <div class="relative z-10 text-center px-6">
+                <h2 class="text-white text-5xl md:text-7xl font-extrabold mb-6">Connecting <br><span class="text-sky-400 decoration-teal-400">Global Health</span></h2>
+                <p class="text-slate-300 text-xl max-w-2xl mx-auto mb-10">Providing high-quality pharmaceutical solutions through innovation and research.</p>
+                <!-- <button class="bg-sky-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white hover:text-sky-600 transition-all">Explore Distribution</button> -->
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?auto=format&fit=crop&q=80&w=2070');">
+            <div class="slide-overlay"></div>
+            <div class="relative z-10 text-center px-6">
+                <h2 class="text-white text-5xl md:text-7xl font-extrabold mb-6">Supply Chain <br><span class="text-teal-400">Perfected</span></h2>
+                <p class="text-slate-300 text-xl max-w-2xl mx-auto mb-10">Advanced cold-chain logistics and real-time tracking for life-saving medications.</p>
+            </div>
+        </div>
 
-    <section id="home">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="background: linear-gradient(rgba(0,51,153,0.7), rgba(0,51,153,0.7)), url('https://ventuspharma.com/public/Blogs/HySX15JSo83riDGGseTX5cjGO3A5906yBKwEARDX.jpeg') center/cover;">
-                    <div class="carousel-caption d-none d-md-block text-start">
-                        <h1>Advancing Health for All</h1>
-                        <p>Providing high-quality pharmaceutical solutions through innovation and research.</p>
-                        <a href="product.html" class="btn btn-light btn-lg">View Products</a>
+    </div>
+
+    <!-- 3. ABOUT US SECTION -->
+    <section id="about" class="py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="floating-vector absolute -top-10 -left-10 w-64 h-64 bg-sky-100 rounded-full blur-3xl opacity-60"></div>
+                <img src="https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=800" class="rounded-[40px] shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-700" alt="Distribution Center">
+                <div class="absolute -bottom-10 -right-10 glass-panel p-8 z-20 shadow-xl">
+                    <div class="text-4xl font-extrabold text-sky-600">45+</div>
+                    <div class="text-slate-500 font-bold uppercase tracking-widest text-xs">Cities Served</div>
+                </div>
+            </div>
+            <div class="reveal">
+                <span class="text-sky-600 font-bold uppercase tracking-[0.3em] text-sm">Our Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 mb-8">Your Strategic <span class="text-sky-500">Logistics Partner</span></h2>
+                <p class="text-slate-600 text-lg leading-relaxed mb-8">
+                    We don't just move medicine; we manage vital lifelines. BluePlus Pharma serves as the master link in the pharmaceutical supply chain, ensuring that high-quality treatments reach clinics and hospitals with zero compromise.
+                </p>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 mb-2">Verified Sourcing</h4>
+                        <p class="text-slate-500 text-sm">We partner exclusively with WHO-GMP certified manufacturers worldwide.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-extrabold text-slate-800 mb-2">Smart Inventory</h4>
+                        <p class="text-slate-500 text-sm">AI-driven demand forecasting to prevent stock-outs and waste.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <h2 class="mb-4" style="color: var(--primary-blue);">Empowering Lives through Quality Medicine</h2>
-                    <p class="lead">At Blue Plus, we are dedicated to the development and distribution of essential healthcare products.</p>
-                    <p>Our state-of-the-art facilities and rigorous quality control ensure that every medication we produce meets international safety standards. We believe in affordable healthcare without compromising on efficacy.</p>
-                    <button class="btn btn-primary mt-3">Learn More About Us</button>
+    <!-- 4. WHY CHOOSE US SECTION -->
+    <section id="why-us" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-extrabold mb-4 text-slate-900">Why <span class="text-sky-500">BluePlus?</span></h2>
+                <p class="text-slate-500 max-w-xl mx-auto">Providing a seamless flow of authentic medications across the global healthcare landscape.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="gradient-border group">
+                    <div class="p-10 h-full">
+                        <div class="w-14 h-14 bg-sky-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-sky-500 transition-colors">
+                            <svg class="w-8 h-8 text-sky-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Quality Assurance</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Rigorous batch-testing and verification of all sourced products before redistribution.</p>
+                    </div>
                 </div>
-                <div class="col-md-6 mt-4 mt-md-0">
-                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=600&q=80" alt="Laboratory" class="img-fluid rounded shadow">
+                <!-- Card 2 -->
+                <div class="gradient-border group">
+                    <div class="p-10 h-full">
+                        <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-teal-500 transition-colors">
+                            <svg class="w-8 h-8 text-teal-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Cold-Chain Network</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Temperature-controlled distribution hubs ensuring bio-stability from point A to point B.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="gradient-border group">
+                    <div class="p-10 h-full">
+                        <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-indigo-500 transition-colors">
+                            <svg class="w-8 h-8 text-indigo-500 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Reliable Lead Times</h3>
+                        <p class="text-slate-500 leading-relaxed text-sm">Optimized transit routes reducing delivery times for essential and rare medicines.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding bg-light-blue">
-        <div class="container">
-            <h2 class="text-center mb-5" style="color: var(--primary-blue);">Why Choose Blue Plus?</h2>
-            <div class="row">
-                <div class="col-md-4 feature-box">
-                    <i class="fas fa-microscope"></i>
-                    <h4>Advanced R&D</h4>
-                    <p>Continuous investment in research to bring the latest medical breakthroughs to patients.</p>
-                </div>
-                <div class="col-md-4 feature-box">
-                    <i class="fas fa-check-circle"></i>
-                    <h4>Global Standards</h4>
-                    <p>Our manufacturing processes are WHO-GMP certified and strictly monitored.</p>
-                </div>
-                <div class="col-md-4 feature-box">
-                    <i class="fas fa-hand-holding-medical"></i>
-                    <h4>Affordable Care</h4>
-                    <p>Making high-quality treatment accessible to diverse populations worldwide.</p>
-                </div>
+    <!-- 5. MAP LOCATION AND FORM -->
+    <section id="contact" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div class="reveal">
+                <h2 class="text-4xl font-extrabold mb-4">Sourcing Inquiry</h2>
+                <p class="text-slate-500 mb-10">Interested in hospital supplies or wholesale distribution? Fill out the form and our distribution team will reach out within 24 hours.</p>
+                
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" placeholder="Organization Name" class="w-full px-6 py-4 rounded-2xl bg-slate-100 border-none focus:ring-2 focus:ring-sky-500 transition-all outline-none">
+                        <input type="email" placeholder="Business Email" class="w-full px-6 py-4 rounded-2xl bg-slate-100 border-none focus:ring-2 focus:ring-sky-500 transition-all outline-none">
+                    </div>
+                    <select class="w-full px-6 py-4 rounded-2xl bg-slate-100 border-none focus:ring-2 focus:ring-sky-500 transition-all outline-none text-slate-500">
+                        <option>Hospital Sourcing</option>
+                        <option>Wholesale Distribution</option>
+                        <option>Cold Chain Logistics</option>
+                        <option>Regional Agency Request</option>
+                    </select>
+                    <textarea rows="4" placeholder="Specific Requirements (Medications, Quantities, etc.)" class="w-full px-6 py-4 rounded-2xl bg-slate-100 border-none focus:ring-2 focus:ring-sky-500 transition-all outline-none"></textarea>
+                    <button class="w-full bg-sky-500 text-white font-bold py-4 rounded-2xl hover:bg-sky-600 transition-all shadow-xl shadow-sky-100">Submit Inquiry</button>
+                </form>
             </div>
+
+            <div class="rounded-[40px] overflow-hidden shadow-2xl relative h-[500px]">
+                <!-- Placeholder for Interactive Map -->
+                <div class="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-center">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3555.526818748644!2d75.772101!3d26.98188!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db3001dbac359%3A0x955966a9ef1881a0!2sBlue%20Plus%20Pharma%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1777029095427!5m2!1sen!2sin" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                               </div>
         </div>
     </section>
 
-    <footer id="contact" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="logo.png" alt="BLUE PLUS" class="footer-logo mb-3">
-                    <p>Excellence in Pharmaceutical solutions. Dedicated to improving global health outcomes.</p>
+    <!-- 6. FOOTER -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-8">
+                        
+                        <span class="text-xl font-bold tracking-tight">BLUE<span class="text-sky-500">PLUS</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Leading the world in pharmaceutical distribution, supply chain management, and clinical sourcing since 2001.
+                    </p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Quality Assurance</a></li>
-                        <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Services</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Cold Chain Logistics</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Hospital Sourcing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Stock Management</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <h5>Contact Us</h5>
-                    <p><i class="fas fa-envelope me-2"></i> info@blueplus.com</p>
-                    <p><i class="fas fa-phone me-2"></i> +1 (234) 567-890</p>
-                    <div class="mt-3">
-                        <i class="fab fa-facebook me-3"></i>
-                        <i class="fab fa-linkedin me-3"></i>
-                        <i class="fab fa-twitter"></i>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Quick Links</h5>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li><a href="product.html" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-8 uppercase tracking-widest text-xs text-sky-400">Contact Us</h5>
+                    <div class="flex flex-wrap gap-2">
+                        <p class="px-2 py-1 text-[12px] font-bold">
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:bluepluspharma11@gmail.com" style="color: white; text-decoration: none;">bluepluspharma11@gmail.com</a>
+                        </p>
+                        <p class="px-2 py-1 text-[12px] font-bold">
+                            <i class="fas fa-phone me-2"></i> 
+                             <a href="tel:+919782425810" style="color: white; text-decoration: none;">+91 9782425810</a>,
+                             <a href="tel:+917566660907" style="color: white; text-decoration: none;">7566660907</a>,
+                             <a href="tel:+917667766305" style="color: white; text-decoration: none;">7667766305</a>
+                        </p>
                     </div>
                 </div>
             </div>
-            <hr class="mt-4">
-            <p class="text-center mb-0">&copy; 2025 Blue Plus Pharmaceuticals. All rights reserved.</p>
+            <div class="pt-12 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-slate-500 text-xs text-center">&copy; 2025 BluePlus Pharma Global Distribution. All logistics operations comply with national pharma standards.</p>
+                <div class="flex space-x-6 text-slate-500 text-xs">
+                    <a href="#" class="hover:text-sky-400">Privacy</a>
+                    <a href="#" class="hover:text-sky-400">Logistics Policy</a>
+                    <a href="#" class="hover:text-sky-400">Vendor Portal</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // --- Carousel Logic ---
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+
+        // --- Mobile Menu Logic (Aligned with Contact Page) ---
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const nav = document.getElementById('main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            const isActive = mobileMenu.classList.toggle('active');
+            if(isActive) {
+                // Menu Opened
+                nav.classList.add('nav-active');
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Menu Closed
+                nav.classList.remove('nav-active');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Intersection Observer for Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
